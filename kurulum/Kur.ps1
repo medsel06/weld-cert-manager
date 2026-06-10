@@ -21,7 +21,12 @@ param(
 $ErrorActionPreference = "Stop"
 $kok = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+# Her şey log dosyasına da yazılır (sorun olursa bu dosya incelenir)
+try { Start-Transcript -Path (Join-Path $kok "kurulum_log.txt") -Force | Out-Null } catch { }
+
 function Yaz([string]$m, [string]$renk = "Gray") { Write-Host $m -ForegroundColor $renk }
+Yaz ("Başlangıç: " + (Get-Date)) "DarkGray"
+Yaz ("PowerShell: " + $PSVersionTable.PSVersion) "DarkGray"
 
 # ---------------------------------------------------------------- girdiler
 if ([string]::IsNullOrWhiteSpace($Dosya)) {
