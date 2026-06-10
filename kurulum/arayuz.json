@@ -1,0 +1,1674 @@
+{
+ "forms": [
+  {
+   "name": "frmAnaMenu",
+   "caption": "Personel İcra Takip",
+   "w": 380,
+   "h": 312,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 380,
+     "h": 34,
+     "cap": "PERSONEL İCRA TAKİP",
+     "size": 14
+    },
+    {
+     "n": "lblInfo",
+     "t": "Label",
+     "x": 20,
+     "y": 46,
+     "w": 340,
+     "h": 26,
+     "cap": "Personel seçin, icra kartından dosyaları, kesintileri ve daireye ödemeleri yönetin."
+    },
+    {
+     "n": "cmdPersonel",
+     "t": "CommandButton",
+     "x": 90,
+     "y": 84,
+     "w": 200,
+     "h": 38,
+     "cap": "PERSONELLER",
+     "size": 11
+    },
+    {
+     "n": "cmdDonem",
+     "t": "CommandButton",
+     "x": 90,
+     "y": 130,
+     "w": 200,
+     "h": 38,
+     "cap": "AY SONU KESİNTİLERİ",
+     "size": 11
+    },
+    {
+     "n": "cmdOzet",
+     "t": "CommandButton",
+     "x": 90,
+     "y": 176,
+     "w": 200,
+     "h": 38,
+     "cap": "PERSONEL ÖZETİ",
+     "size": 11
+    },
+    {
+     "n": "cmdCikis",
+     "t": "CommandButton",
+     "x": 90,
+     "y": 222,
+     "w": 200,
+     "h": 32,
+     "cap": "ÇIKIŞ"
+    },
+    {
+     "n": "lblAlt",
+     "t": "Label",
+     "x": 20,
+     "y": 266,
+     "w": 340,
+     "h": 30,
+     "cap": "Bakım: Excel sayfalarını görmek için Alt+F8 > SAYFALARI_GOSTER",
+     "size": 8,
+     "italic": true
+    }
+   ]
+  },
+  {
+   "name": "frmPersonelListe",
+   "caption": "Personeller",
+   "w": 640,
+   "h": 452,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 640,
+     "h": 32,
+     "cap": "PERSONELLER",
+     "size": 13
+    },
+    {
+     "n": "lblAra",
+     "t": "Label",
+     "x": 16,
+     "y": 46,
+     "w": 36,
+     "h": 16,
+     "cap": "Ara"
+    },
+    {
+     "n": "txtAra",
+     "t": "TextBox",
+     "x": 56,
+     "y": 44,
+     "w": 220,
+     "h": 20
+    },
+    {
+     "n": "lblSayac",
+     "t": "Label",
+     "x": 480,
+     "y": 46,
+     "w": 144,
+     "h": 16,
+     "align": 3
+    },
+    {
+     "n": "lblH_pl0",
+     "t": "Label",
+     "x": 18,
+     "y": 70,
+     "w": 218,
+     "h": 13,
+     "cap": "Ad Soyad",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_pl1",
+     "t": "Label",
+     "x": 238,
+     "y": 70,
+     "w": 98,
+     "h": 13,
+     "cap": "T.C. Kimlik",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_pl2",
+     "t": "Label",
+     "x": 338,
+     "y": 70,
+     "w": 93,
+     "h": 13,
+     "cap": "Net Maaş",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_pl3",
+     "t": "Label",
+     "x": 433,
+     "y": 70,
+     "w": 83,
+     "h": 13,
+     "cap": "İşe Giriş",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lstPersonel",
+     "t": "ListBox",
+     "x": 16,
+     "y": 86,
+     "w": 608,
+     "h": 168,
+     "colCount": 6,
+     "colWidths": "220 pt;100 pt;95 pt;85 pt;0 pt;0 pt"
+    },
+    {
+     "n": "lblBolum1",
+     "t": "Label",
+     "x": 16,
+     "y": 262,
+     "w": 608,
+     "h": 16,
+     "cap": "  Seçili Personel (düzenle / yeni)"
+    },
+    {
+     "n": "lblAd",
+     "t": "Label",
+     "x": 16,
+     "y": 286,
+     "w": 70,
+     "h": 16,
+     "cap": "Ad Soyad"
+    },
+    {
+     "n": "txtAd",
+     "t": "TextBox",
+     "x": 90,
+     "y": 284,
+     "w": 230,
+     "h": 20
+    },
+    {
+     "n": "lblTC",
+     "t": "Label",
+     "x": 336,
+     "y": 286,
+     "w": 28,
+     "h": 16,
+     "cap": "TC"
+    },
+    {
+     "n": "txtTC",
+     "t": "TextBox",
+     "x": 368,
+     "y": 284,
+     "w": 120,
+     "h": 20
+    },
+    {
+     "n": "lblNet",
+     "t": "Label",
+     "x": 16,
+     "y": 312,
+     "w": 70,
+     "h": 16,
+     "cap": "Net Maaş"
+    },
+    {
+     "n": "txtNetMaas",
+     "t": "TextBox",
+     "x": 90,
+     "y": 310,
+     "w": 120,
+     "h": 20
+    },
+    {
+     "n": "lblTarih",
+     "t": "Label",
+     "x": 226,
+     "y": 312,
+     "w": 56,
+     "h": 16,
+     "cap": "İşe Giriş"
+    },
+    {
+     "n": "txtIseGiris",
+     "t": "TextBox",
+     "x": 286,
+     "y": 310,
+     "w": 90,
+     "h": 20
+    },
+    {
+     "n": "lblAciklama",
+     "t": "Label",
+     "x": 392,
+     "y": 312,
+     "w": 56,
+     "h": 16,
+     "cap": "Açıklama"
+    },
+    {
+     "n": "txtAciklama",
+     "t": "TextBox",
+     "x": 452,
+     "y": 310,
+     "w": 172,
+     "h": 20
+    },
+    {
+     "n": "cmdYeni",
+     "t": "CommandButton",
+     "x": 16,
+     "y": 344,
+     "w": 80,
+     "h": 28,
+     "cap": "Yeni"
+    },
+    {
+     "n": "cmdKaydet",
+     "t": "CommandButton",
+     "x": 102,
+     "y": 344,
+     "w": 90,
+     "h": 28,
+     "cap": "Kaydet"
+    },
+    {
+     "n": "cmdSil",
+     "t": "CommandButton",
+     "x": 198,
+     "y": 344,
+     "w": 70,
+     "h": 28,
+     "cap": "Sil"
+    },
+    {
+     "n": "cmdKart",
+     "t": "CommandButton",
+     "x": 282,
+     "y": 344,
+     "w": 170,
+     "h": 28,
+     "cap": "İCRA KARTINI AÇ",
+     "bold": true
+    },
+    {
+     "n": "cmdKapat",
+     "t": "CommandButton",
+     "x": 544,
+     "y": 344,
+     "w": 80,
+     "h": 28,
+     "cap": "Kapat"
+    },
+    {
+     "n": "lblNot",
+     "t": "Label",
+     "x": 16,
+     "y": 382,
+     "w": 608,
+     "h": 28,
+     "cap": "İpucu: listede personele ÇİFT TIKLAYIN -> icra kartı açılır (dosyalar, kesintiler, daireye ödemeler).",
+     "size": 8,
+     "italic": true
+    }
+   ]
+  },
+  {
+   "name": "frmPersonelKart",
+   "caption": "Personel İcra Kartı",
+   "w": 700,
+   "h": 532,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 700,
+     "h": 32,
+     "cap": "İCRA KARTI",
+     "size": 13
+    },
+    {
+     "n": "lblKisi",
+     "t": "Label",
+     "x": 16,
+     "y": 40,
+     "w": 430,
+     "h": 18,
+     "bold": true
+    },
+    {
+     "n": "lblToplamlar",
+     "t": "Label",
+     "x": 450,
+     "y": 40,
+     "w": 234,
+     "h": 18,
+     "align": 3
+    },
+    {
+     "n": "lblH_kd0",
+     "t": "Label",
+     "x": 18,
+     "y": 64,
+     "w": 32,
+     "h": 13,
+     "cap": "Önc.",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kd1",
+     "t": "Label",
+     "x": 52,
+     "y": 64,
+     "w": 93,
+     "h": 13,
+     "cap": "Dosya No",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kd2",
+     "t": "Label",
+     "x": 147,
+     "y": 64,
+     "w": 62,
+     "h": 13,
+     "cap": "Tarih",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kd3",
+     "t": "Label",
+     "x": 211,
+     "y": 64,
+     "w": 166,
+     "h": 13,
+     "cap": "Alacaklı",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kd4",
+     "t": "Label",
+     "x": 379,
+     "y": 64,
+     "w": 74,
+     "h": 13,
+     "cap": "İcra Tutarı",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kd5",
+     "t": "Label",
+     "x": 455,
+     "y": 64,
+     "w": 74,
+     "h": 13,
+     "cap": "Kalan",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kd6",
+     "t": "Label",
+     "x": 531,
+     "y": 64,
+     "w": 68,
+     "h": 13,
+     "cap": "Bekleyen",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kd7",
+     "t": "Label",
+     "x": 601,
+     "y": 64,
+     "w": 56,
+     "h": 13,
+     "cap": "Durum",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lstDosyalar",
+     "t": "ListBox",
+     "x": 16,
+     "y": 80,
+     "w": 668,
+     "h": 128,
+     "colCount": 9,
+     "colWidths": "34 pt;95 pt;64 pt;168 pt;76 pt;76 pt;70 pt;58 pt;0 pt"
+    },
+    {
+     "n": "lblDosyaBilgi",
+     "t": "Label",
+     "x": 16,
+     "y": 214,
+     "w": 668,
+     "h": 28,
+     "size": 8,
+     "italic": true
+    },
+    {
+     "n": "lblKesilen",
+     "t": "Label",
+     "x": 16,
+     "y": 246,
+     "w": 200,
+     "h": 16
+    },
+    {
+     "n": "lblOdenen",
+     "t": "Label",
+     "x": 230,
+     "y": 246,
+     "w": 210,
+     "h": 16
+    },
+    {
+     "n": "lblBekleyen",
+     "t": "Label",
+     "x": 450,
+     "y": 246,
+     "w": 234,
+     "h": 16,
+     "bold": true
+    },
+    {
+     "n": "lblBolum1",
+     "t": "Label",
+     "x": 16,
+     "y": 270,
+     "w": 330,
+     "h": 16,
+     "cap": "  BORDRO KESİNTİLERİ",
+     "bold": true
+    },
+    {
+     "n": "lblH_kk0",
+     "t": "Label",
+     "x": 18,
+     "y": 290,
+     "w": 36,
+     "h": 13,
+     "cap": "Yıl",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kk1",
+     "t": "Label",
+     "x": 56,
+     "y": 290,
+     "w": 62,
+     "h": 13,
+     "cap": "Ay",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kk2",
+     "t": "Label",
+     "x": 120,
+     "y": 290,
+     "w": 74,
+     "h": 13,
+     "cap": "Tutar",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_kk3",
+     "t": "Label",
+     "x": 196,
+     "y": 290,
+     "w": 142,
+     "h": 13,
+     "cap": "Açıklama",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lstKesintiler",
+     "t": "ListBox",
+     "x": 16,
+     "y": 306,
+     "w": 330,
+     "h": 122,
+     "colCount": 4,
+     "colWidths": "38 pt;64 pt;76 pt;144 pt"
+    },
+    {
+     "n": "lblBolum2",
+     "t": "Label",
+     "x": 354,
+     "y": 270,
+     "w": 330,
+     "h": 16,
+     "cap": "  İCRA DAİRESİNE ÖDEMELER",
+     "bold": true
+    },
+    {
+     "n": "lblH_ko0",
+     "t": "Label",
+     "x": 356,
+     "y": 290,
+     "w": 62,
+     "h": 13,
+     "cap": "Tarih",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_ko1",
+     "t": "Label",
+     "x": 420,
+     "y": 290,
+     "w": 74,
+     "h": 13,
+     "cap": "Tutar",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_ko2",
+     "t": "Label",
+     "x": 496,
+     "y": 290,
+     "w": 84,
+     "h": 13,
+     "cap": "Banka/Dekont",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_ko3",
+     "t": "Label",
+     "x": 582,
+     "y": 290,
+     "w": 86,
+     "h": 13,
+     "cap": "Açıklama",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lstOdemeler",
+     "t": "ListBox",
+     "x": 354,
+     "y": 306,
+     "w": 330,
+     "h": 122,
+     "colCount": 5,
+     "colWidths": "64 pt;76 pt;86 pt;88 pt;0 pt"
+    },
+    {
+     "n": "cmdYeniDosya",
+     "t": "CommandButton",
+     "x": 16,
+     "y": 440,
+     "w": 96,
+     "h": 30,
+     "cap": "Yeni Dosya"
+    },
+    {
+     "n": "cmdDuzenle",
+     "t": "CommandButton",
+     "x": 118,
+     "y": 440,
+     "w": 86,
+     "h": 30,
+     "cap": "Düzenle"
+    },
+    {
+     "n": "cmdDosyaSil",
+     "t": "CommandButton",
+     "x": 210,
+     "y": 440,
+     "w": 70,
+     "h": 30,
+     "cap": "Sil"
+    },
+    {
+     "n": "cmdKesintiEkle",
+     "t": "CommandButton",
+     "x": 296,
+     "y": 440,
+     "w": 100,
+     "h": 30,
+     "cap": "Kesinti Ekle"
+    },
+    {
+     "n": "cmdOdemeEkle",
+     "t": "CommandButton",
+     "x": 402,
+     "y": 440,
+     "w": 120,
+     "h": 30,
+     "cap": "ÖDEME EKLE",
+     "bold": true
+    },
+    {
+     "n": "cmdYenile",
+     "t": "CommandButton",
+     "x": 538,
+     "y": 440,
+     "w": 66,
+     "h": 30,
+     "cap": "Yenile"
+    },
+    {
+     "n": "cmdKapat",
+     "t": "CommandButton",
+     "x": 610,
+     "y": 440,
+     "w": 74,
+     "h": 30,
+     "cap": "Kapat"
+    },
+    {
+     "n": "lblNot",
+     "t": "Label",
+     "x": 16,
+     "y": 478,
+     "w": 668,
+     "h": 26,
+     "cap": "Dosya seçince kesinti ve ödeme geçmişi yüklenir. Ödeme satırına çift tık: silme onayı sorar.",
+     "size": 8,
+     "italic": true
+    }
+   ]
+  },
+  {
+   "name": "frmIcraGiris",
+   "caption": "İcra Dosyası",
+   "w": 560,
+   "h": 440,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 560,
+     "h": 32,
+     "cap": "İCRA DOSYASI",
+     "size": 13
+    },
+    {
+     "n": "lblPersonel",
+     "t": "Label",
+     "x": 16,
+     "y": 46,
+     "w": 76,
+     "h": 16,
+     "cap": "Personel"
+    },
+    {
+     "n": "cboPersonel",
+     "t": "ComboBox",
+     "x": 100,
+     "y": 44,
+     "w": 260,
+     "h": 20
+    },
+    {
+     "n": "lblPersonelBilgi",
+     "t": "Label",
+     "x": 16,
+     "y": 68,
+     "w": 528,
+     "h": 14,
+     "size": 8,
+     "italic": true
+    },
+    {
+     "n": "lblBolum1",
+     "t": "Label",
+     "x": 16,
+     "y": 88,
+     "w": 528,
+     "h": 16,
+     "cap": "  Dosya Bilgileri"
+    },
+    {
+     "n": "lblDosyaTarihi",
+     "t": "Label",
+     "x": 16,
+     "y": 112,
+     "w": 76,
+     "h": 16,
+     "cap": "Dosya Tarihi"
+    },
+    {
+     "n": "txtDosyaTarihi",
+     "t": "TextBox",
+     "x": 100,
+     "y": 110,
+     "w": 90,
+     "h": 20
+    },
+    {
+     "n": "lblDosyaNo",
+     "t": "Label",
+     "x": 206,
+     "y": 112,
+     "w": 64,
+     "h": 16,
+     "cap": "Dosya No"
+    },
+    {
+     "n": "txtDosyaNo",
+     "t": "TextBox",
+     "x": 274,
+     "y": 110,
+     "w": 120,
+     "h": 20
+    },
+    {
+     "n": "lblOncelik",
+     "t": "Label",
+     "x": 410,
+     "y": 112,
+     "w": 50,
+     "h": 16,
+     "cap": "Öncelik"
+    },
+    {
+     "n": "txtOncelik",
+     "t": "TextBox",
+     "x": 464,
+     "y": 110,
+     "w": 40,
+     "h": 20
+    },
+    {
+     "n": "lblDaire",
+     "t": "Label",
+     "x": 16,
+     "y": 138,
+     "w": 76,
+     "h": 16,
+     "cap": "İcra Dairesi"
+    },
+    {
+     "n": "txtDaire",
+     "t": "TextBox",
+     "x": 100,
+     "y": 136,
+     "w": 444,
+     "h": 20
+    },
+    {
+     "n": "lblAlacakli",
+     "t": "Label",
+     "x": 16,
+     "y": 164,
+     "w": 76,
+     "h": 16,
+     "cap": "Alacaklı"
+    },
+    {
+     "n": "txtAlacakli",
+     "t": "TextBox",
+     "x": 100,
+     "y": 162,
+     "w": 444,
+     "h": 20
+    },
+    {
+     "n": "lblBolum2",
+     "t": "Label",
+     "x": 16,
+     "y": 190,
+     "w": 528,
+     "h": 16,
+     "cap": "  Tutar ve Kesinti Kuralı"
+    },
+    {
+     "n": "lblIcraTutar",
+     "t": "Label",
+     "x": 16,
+     "y": 214,
+     "w": 76,
+     "h": 16,
+     "cap": "İcra Tutarı"
+    },
+    {
+     "n": "txtIcraTutar",
+     "t": "TextBox",
+     "x": 100,
+     "y": 212,
+     "w": 110,
+     "h": 20
+    },
+    {
+     "n": "lblSekil",
+     "t": "Label",
+     "x": 226,
+     "y": 214,
+     "w": 78,
+     "h": 16,
+     "cap": "Kesinti Şekli"
+    },
+    {
+     "n": "cboKesintiSekli",
+     "t": "ComboBox",
+     "x": 308,
+     "y": 212,
+     "w": 100,
+     "h": 20
+    },
+    {
+     "n": "lblPay",
+     "t": "Label",
+     "x": 420,
+     "y": 214,
+     "w": 28,
+     "h": 16,
+     "cap": "Oran"
+    },
+    {
+     "n": "txtPay",
+     "t": "TextBox",
+     "x": 452,
+     "y": 212,
+     "w": 30,
+     "h": 20
+    },
+    {
+     "n": "lblBolme",
+     "t": "Label",
+     "x": 486,
+     "y": 214,
+     "w": 8,
+     "h": 16,
+     "cap": "/"
+    },
+    {
+     "n": "txtPayda",
+     "t": "TextBox",
+     "x": 498,
+     "y": 212,
+     "w": 30,
+     "h": 20
+    },
+    {
+     "n": "lblSabit",
+     "t": "Label",
+     "x": 16,
+     "y": 240,
+     "w": 80,
+     "h": 16,
+     "cap": "Sabit Tutar"
+    },
+    {
+     "n": "txtSabit",
+     "t": "TextBox",
+     "x": 100,
+     "y": 238,
+     "w": 110,
+     "h": 20
+    },
+    {
+     "n": "lblOnceki",
+     "t": "Label",
+     "x": 226,
+     "y": 240,
+     "w": 132,
+     "h": 16,
+     "cap": "Önceki Firmada Tahsil"
+    },
+    {
+     "n": "txtOncekiTahsil",
+     "t": "TextBox",
+     "x": 362,
+     "y": 238,
+     "w": 110,
+     "h": 20
+    },
+    {
+     "n": "lblBolum3",
+     "t": "Label",
+     "x": 16,
+     "y": 266,
+     "w": 528,
+     "h": 16,
+     "cap": "  Diğer"
+    },
+    {
+     "n": "lblIban",
+     "t": "Label",
+     "x": 16,
+     "y": 290,
+     "w": 76,
+     "h": 16,
+     "cap": "Banka/IBAN"
+    },
+    {
+     "n": "txtIban",
+     "t": "TextBox",
+     "x": 100,
+     "y": 288,
+     "w": 300,
+     "h": 20
+    },
+    {
+     "n": "lblAciklama",
+     "t": "Label",
+     "x": 16,
+     "y": 316,
+     "w": 76,
+     "h": 16,
+     "cap": "Açıklama"
+    },
+    {
+     "n": "txtAciklama",
+     "t": "TextBox",
+     "x": 100,
+     "y": 314,
+     "w": 444,
+     "h": 20
+    },
+    {
+     "n": "lblNot",
+     "t": "Label",
+     "x": 16,
+     "y": 342,
+     "w": 528,
+     "h": 14,
+     "cap": "Tarih kutusuna tıklayın -> takvim açılır. Öncelik boş bırakılırsa sıradaki numara verilir.",
+     "size": 8,
+     "italic": true
+    },
+    {
+     "n": "cmdKaydet",
+     "t": "CommandButton",
+     "x": 150,
+     "y": 368,
+     "w": 110,
+     "h": 30,
+     "cap": "Kaydet"
+    },
+    {
+     "n": "cmdTemizle",
+     "t": "CommandButton",
+     "x": 268,
+     "y": 368,
+     "w": 90,
+     "h": 30,
+     "cap": "Temizle"
+    },
+    {
+     "n": "cmdKapat",
+     "t": "CommandButton",
+     "x": 366,
+     "y": 368,
+     "w": 90,
+     "h": 30,
+     "cap": "Kapat"
+    }
+   ]
+  },
+  {
+   "name": "frmKesintiGiris",
+   "caption": "Manuel Kesinti",
+   "w": 420,
+   "h": 312,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 420,
+     "h": 32,
+     "cap": "MANUEL KESİNTİ",
+     "size": 13
+    },
+    {
+     "n": "lblPersonel",
+     "t": "Label",
+     "x": 16,
+     "y": 48,
+     "w": 88,
+     "h": 16,
+     "cap": "Personel"
+    },
+    {
+     "n": "cboPersonel",
+     "t": "ComboBox",
+     "x": 112,
+     "y": 46,
+     "w": 240,
+     "h": 20
+    },
+    {
+     "n": "lblDosya",
+     "t": "Label",
+     "x": 16,
+     "y": 76,
+     "w": 88,
+     "h": 16,
+     "cap": "Dosya No"
+    },
+    {
+     "n": "cboDosya",
+     "t": "ComboBox",
+     "x": 112,
+     "y": 74,
+     "w": 240,
+     "h": 20
+    },
+    {
+     "n": "lblYil",
+     "t": "Label",
+     "x": 16,
+     "y": 104,
+     "w": 88,
+     "h": 16,
+     "cap": "Kesinti Yılı"
+    },
+    {
+     "n": "txtYil",
+     "t": "TextBox",
+     "x": 112,
+     "y": 102,
+     "w": 80,
+     "h": 20
+    },
+    {
+     "n": "lblAy",
+     "t": "Label",
+     "x": 16,
+     "y": 132,
+     "w": 88,
+     "h": 16,
+     "cap": "Kesinti Ayı"
+    },
+    {
+     "n": "cboAy",
+     "t": "ComboBox",
+     "x": 112,
+     "y": 130,
+     "w": 120,
+     "h": 20
+    },
+    {
+     "n": "lblTutar",
+     "t": "Label",
+     "x": 16,
+     "y": 160,
+     "w": 88,
+     "h": 16,
+     "cap": "Tutar (TL)"
+    },
+    {
+     "n": "txtTutar",
+     "t": "TextBox",
+     "x": 112,
+     "y": 158,
+     "w": 120,
+     "h": 20
+    },
+    {
+     "n": "lblAciklama",
+     "t": "Label",
+     "x": 16,
+     "y": 188,
+     "w": 88,
+     "h": 16,
+     "cap": "Açıklama"
+    },
+    {
+     "n": "txtAciklama",
+     "t": "TextBox",
+     "x": 112,
+     "y": 186,
+     "w": 240,
+     "h": 20
+    },
+    {
+     "n": "lblNot",
+     "t": "Label",
+     "x": 16,
+     "y": 214,
+     "w": 388,
+     "h": 26,
+     "cap": "Geçmiş aylar veya elle takip için. Ay sonu otomatik kesintiler AY SONU KESİNTİLERİ ekranından.",
+     "size": 8,
+     "italic": true
+    },
+    {
+     "n": "cmdKaydet",
+     "t": "CommandButton",
+     "x": 112,
+     "y": 248,
+     "w": 110,
+     "h": 30,
+     "cap": "Kaydet"
+    },
+    {
+     "n": "cmdKapat",
+     "t": "CommandButton",
+     "x": 232,
+     "y": 248,
+     "w": 90,
+     "h": 30,
+     "cap": "Kapat"
+    }
+   ]
+  },
+  {
+   "name": "frmOdemeGiris",
+   "caption": "İcra Dairesine Ödeme",
+   "w": 420,
+   "h": 344,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 420,
+     "h": 32,
+     "cap": "İCRA DAİRESİNE ÖDEME",
+     "size": 13
+    },
+    {
+     "n": "lblPersonel",
+     "t": "Label",
+     "x": 16,
+     "y": 48,
+     "w": 88,
+     "h": 16,
+     "cap": "Personel"
+    },
+    {
+     "n": "cboPersonel",
+     "t": "ComboBox",
+     "x": 112,
+     "y": 46,
+     "w": 240,
+     "h": 20
+    },
+    {
+     "n": "lblDosya",
+     "t": "Label",
+     "x": 16,
+     "y": 76,
+     "w": 88,
+     "h": 16,
+     "cap": "Dosya No"
+    },
+    {
+     "n": "cboDosya",
+     "t": "ComboBox",
+     "x": 112,
+     "y": 74,
+     "w": 240,
+     "h": 20
+    },
+    {
+     "n": "lblBekleyenBilgi",
+     "t": "Label",
+     "x": 112,
+     "y": 98,
+     "w": 250,
+     "h": 16,
+     "italic": true
+    },
+    {
+     "n": "lblTarih",
+     "t": "Label",
+     "x": 16,
+     "y": 122,
+     "w": 88,
+     "h": 16,
+     "cap": "Ödeme Tarihi"
+    },
+    {
+     "n": "txtTarih",
+     "t": "TextBox",
+     "x": 112,
+     "y": 120,
+     "w": 90,
+     "h": 20
+    },
+    {
+     "n": "lblTutar",
+     "t": "Label",
+     "x": 16,
+     "y": 150,
+     "w": 88,
+     "h": 16,
+     "cap": "Tutar (TL)"
+    },
+    {
+     "n": "txtTutar",
+     "t": "TextBox",
+     "x": 112,
+     "y": 148,
+     "w": 120,
+     "h": 20
+    },
+    {
+     "n": "lblDekont",
+     "t": "Label",
+     "x": 16,
+     "y": 178,
+     "w": 88,
+     "h": 16,
+     "cap": "Banka/Dekont"
+    },
+    {
+     "n": "txtDekont",
+     "t": "TextBox",
+     "x": 112,
+     "y": 176,
+     "w": 240,
+     "h": 20
+    },
+    {
+     "n": "lblAciklama",
+     "t": "Label",
+     "x": 16,
+     "y": 206,
+     "w": 88,
+     "h": 16,
+     "cap": "Açıklama"
+    },
+    {
+     "n": "txtAciklama",
+     "t": "TextBox",
+     "x": 112,
+     "y": 204,
+     "w": 240,
+     "h": 20
+    },
+    {
+     "n": "lblNot",
+     "t": "Label",
+     "x": 16,
+     "y": 232,
+     "w": 388,
+     "h": 26,
+     "cap": "Bordrodan kesilen tutarın icra dairesinin hesabına yatırılması burada kaydedilir.",
+     "size": 8,
+     "italic": true
+    },
+    {
+     "n": "cmdKaydet",
+     "t": "CommandButton",
+     "x": 112,
+     "y": 266,
+     "w": 110,
+     "h": 30,
+     "cap": "Kaydet"
+    },
+    {
+     "n": "cmdKapat",
+     "t": "CommandButton",
+     "x": 232,
+     "y": 266,
+     "w": 90,
+     "h": 30,
+     "cap": "Kapat"
+    }
+   ]
+  },
+  {
+   "name": "frmPersonelOzet",
+   "caption": "Personel Özeti",
+   "w": 660,
+   "h": 408,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 660,
+     "h": 32,
+     "cap": "PERSONEL ÖZETİ",
+     "size": 13
+    },
+    {
+     "n": "lblSayac",
+     "t": "Label",
+     "x": 480,
+     "y": 42,
+     "w": 164,
+     "h": 16,
+     "align": 3
+    },
+    {
+     "n": "lblH_oz0",
+     "t": "Label",
+     "x": 18,
+     "y": 62,
+     "w": 138,
+     "h": 13,
+     "cap": "Ad Soyad",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_oz1",
+     "t": "Label",
+     "x": 158,
+     "y": 62,
+     "w": 68,
+     "h": 13,
+     "cap": "Net Maaş",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_oz2",
+     "t": "Label",
+     "x": 228,
+     "y": 62,
+     "w": 36,
+     "h": 13,
+     "cap": "Dosya",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_oz3",
+     "t": "Label",
+     "x": 266,
+     "y": 62,
+     "w": 74,
+     "h": 13,
+     "cap": "Toplam İcra",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_oz4",
+     "t": "Label",
+     "x": 342,
+     "y": 62,
+     "w": 74,
+     "h": 13,
+     "cap": "Tahsil",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_oz5",
+     "t": "Label",
+     "x": 418,
+     "y": 62,
+     "w": 74,
+     "h": 13,
+     "cap": "Kalan",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_oz6",
+     "t": "Label",
+     "x": 494,
+     "y": 62,
+     "w": 68,
+     "h": 13,
+     "cap": "Ödenen",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lblH_oz7",
+     "t": "Label",
+     "x": 564,
+     "y": 62,
+     "w": 68,
+     "h": 13,
+     "cap": "Bekleyen",
+     "size": 8,
+     "bold": true
+    },
+    {
+     "n": "lstOzet",
+     "t": "ListBox",
+     "x": 16,
+     "y": 78,
+     "w": 628,
+     "h": 254,
+     "colCount": 8,
+     "colWidths": "140 pt;70 pt;38 pt;76 pt;76 pt;76 pt;70 pt;70 pt"
+    },
+    {
+     "n": "lblNot",
+     "t": "Label",
+     "x": 16,
+     "y": 342,
+     "w": 400,
+     "h": 28,
+     "cap": "Tahsil = önceki firma + bordro kesintileri. Bekleyen = kesilen ama daireye henüz ödenmeyen.",
+     "size": 8,
+     "italic": true
+    },
+    {
+     "n": "cmdYenile",
+     "t": "CommandButton",
+     "x": 440,
+     "y": 342,
+     "w": 90,
+     "h": 28,
+     "cap": "Yenile"
+    },
+    {
+     "n": "cmdKapat",
+     "t": "CommandButton",
+     "x": 540,
+     "y": 342,
+     "w": 90,
+     "h": 28,
+     "cap": "Kapat"
+    }
+   ]
+  },
+  {
+   "name": "frmDonem",
+   "caption": "Ay Sonu Kesintileri",
+   "w": 400,
+   "h": 290,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 400,
+     "h": 32,
+     "cap": "AY SONU KESİNTİLERİ",
+     "size": 13
+    },
+    {
+     "n": "lblYil",
+     "t": "Label",
+     "x": 16,
+     "y": 50,
+     "w": 60,
+     "h": 16,
+     "cap": "Yıl"
+    },
+    {
+     "n": "txtYil",
+     "t": "TextBox",
+     "x": 80,
+     "y": 48,
+     "w": 80,
+     "h": 20
+    },
+    {
+     "n": "lblAy",
+     "t": "Label",
+     "x": 180,
+     "y": 50,
+     "w": 30,
+     "h": 16,
+     "cap": "Ay"
+    },
+    {
+     "n": "cboAy",
+     "t": "ComboBox",
+     "x": 214,
+     "y": 48,
+     "w": 120,
+     "h": 20
+    },
+    {
+     "n": "lblOnizleme",
+     "t": "Label",
+     "x": 16,
+     "y": 80,
+     "w": 368,
+     "h": 18,
+     "bold": true
+    },
+    {
+     "n": "lblNot",
+     "t": "Label",
+     "x": 16,
+     "y": 104,
+     "w": 368,
+     "h": 42,
+     "cap": "ÖDEMEDE durumundaki dosyalara net maaş x oran (veya sabit tutar) kadar kesinti işlenir; dosya kapanırsa artan tutar sıradakine taşar. Aynı aya ikinci kez basarsanız mükerrer kayıt oluşmaz.",
+     "size": 8,
+     "italic": true
+    },
+    {
+     "n": "cmdHesapla",
+     "t": "CommandButton",
+     "x": 16,
+     "y": 154,
+     "w": 180,
+     "h": 36,
+     "cap": "HESAPLA ve KAYDET",
+     "bold": true
+    },
+    {
+     "n": "cmdGeriAl",
+     "t": "CommandButton",
+     "x": 204,
+     "y": 154,
+     "w": 180,
+     "h": 36,
+     "cap": "Seçili Ayı GERİ AL"
+    },
+    {
+     "n": "cmdKapat",
+     "t": "CommandButton",
+     "x": 150,
+     "y": 200,
+     "w": 100,
+     "h": 28,
+     "cap": "Kapat"
+    }
+   ]
+  },
+  {
+   "name": "frmTarihSec",
+   "caption": "Tarih Seç",
+   "w": 240,
+   "h": 168,
+   "controls": [
+    {
+     "n": "lblTitle",
+     "t": "Label",
+     "x": 0,
+     "y": 0,
+     "w": 240,
+     "h": 26,
+     "cap": "TARİH SEÇ",
+     "size": 11
+    },
+    {
+     "n": "cboGun",
+     "t": "ComboBox",
+     "x": 16,
+     "y": 38,
+     "w": 56,
+     "h": 20
+    },
+    {
+     "n": "cboAy",
+     "t": "ComboBox",
+     "x": 80,
+     "y": 38,
+     "w": 84,
+     "h": 20
+    },
+    {
+     "n": "cboYil",
+     "t": "ComboBox",
+     "x": 172,
+     "y": 38,
+     "w": 52,
+     "h": 20
+    },
+    {
+     "n": "lblSecili",
+     "t": "Label",
+     "x": 16,
+     "y": 66,
+     "w": 208,
+     "h": 16,
+     "bold": true,
+     "align": 2
+    },
+    {
+     "n": "cmdBugun",
+     "t": "CommandButton",
+     "x": 16,
+     "y": 92,
+     "w": 64,
+     "h": 26,
+     "cap": "Bugün"
+    },
+    {
+     "n": "cmdSec",
+     "t": "CommandButton",
+     "x": 88,
+     "y": 92,
+     "w": 72,
+     "h": 26,
+     "cap": "Seç",
+     "bold": true
+    },
+    {
+     "n": "cmdIptal",
+     "t": "CommandButton",
+     "x": 168,
+     "y": 92,
+     "w": 56,
+     "h": 26,
+     "cap": "İptal"
+    }
+   ]
+  }
+ ]
+}
